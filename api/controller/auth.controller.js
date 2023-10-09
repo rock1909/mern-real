@@ -19,9 +19,9 @@ export const signup = async (req, res, next) => {
 
 
 export const signin = async (req, res, next) => {
-    const { email, password } = req.body; // Get data from request.body to email and password
-    try { // Authenticate users by email and password
-      const validUser =  await User.findOne({ email }); // Check email in mongoose
+    const { email, password } = req.body; 
+    try { 
+      const validUser =  await User.findOne({ email }); 
       if (!validUser) return next(errorHandler(404, 'User not found!'));
       const validPassword = bcryptjs.compareSync(password, validUser.password);
       if (!validPassword) return next(errorHandler(401, 'Wrong Credentials!'));

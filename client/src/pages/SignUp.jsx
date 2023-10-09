@@ -48,7 +48,8 @@ export default function SignUp() {
         <h1 className='text-3xl text-center font-semibold my-7'>
             Sign Up</h1>
         <div className='text-lg text-center mb-5'>
-            <p>Get access to lastest local listings</p>
+            <p>Get access to the lastest local listings</p>
+            <p  className='text-sm'>Register to find your new home today!</p>
         </div>
         <form onSubmit={handleSubmit} className='flex flex-col gap-4'>
             <input 
@@ -75,7 +76,7 @@ export default function SignUp() {
                 {loading ? 'Loading...' : 'Sign Up'}</button>
         </form>
         <div className='flex gap-3 mt-5'>
-            <p>Have and account?</p>
+            <p>Already have and account?</p>
             <Link to={"/sign-in"}>
                 <span className='text-blue-700'>Sign In</span>
             </Link>
