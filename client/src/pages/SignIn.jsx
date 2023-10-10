@@ -20,7 +20,7 @@ export default function SignIn() {
         e.preventDefault(); /* Prevents refreshing the page during signup */
         try {
             dispatch(signInStart());
-            const res = await fetch('/api/auth/signin', 
+            const res = await fetch(`/api/auth/signin`, 
             {
                 method: 'POST', 
                 headers: {
