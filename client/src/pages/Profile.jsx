@@ -133,6 +133,9 @@ export default function Profile() {
             alt="profile"
             className='rounded-full h-24 w-24 object-cover cursor-pointer self-center mt-2' 
           />
+           <div className='text-sm text-center mb-1'>
+            <p className='text-blue-950'>Edit your profile here</p>
+        </div>
           <p className='text-sm self-center'>
             { fileUploadError ? (
               <span className='text-red-700'>
